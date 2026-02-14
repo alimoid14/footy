@@ -8,7 +8,7 @@ function Layout() {
   return (
     <div>
       <Navbar />
-      <main className="mt-16 min-h-[calc(100vh-64px)] bg-slate-50 flex">
+      <main className="mt-16 min-h-[calc(100vh-64px)] flex">
         <Outlet />
       </main>
     </div>

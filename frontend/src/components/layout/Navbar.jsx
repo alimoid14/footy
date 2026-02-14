@@ -30,10 +30,10 @@ const Navbar = () => {
     <>
       <nav
         ref={navbarRef}
-        className="fixed top-0 w-full mix-blend-difference z-30"
+        className="fixed top-0 w-full z-30 mix-blend-difference bg-white"
       >
         <div className="main-container py-6 flex justify-between items-center">
-          <button onClick={scrollToTop} className="block">
+          <button onClick={scrollToTop} className="block z-30">
             <img src={logo} alt="logo" className="h-10 w-auto" />
           </button>
           <div
@@ -41,13 +41,13 @@ const Navbar = () => {
             className="flex flex-col gap-1.5 cursor-pointer"
           >
             <span
-              className={`inline-block w-10 lg:w-12 h-0.5 transition-transform duration-200 ${
-                menuOpen ? "rotate-45 translate-y-1 bg-white" : "bg-black"
+              className={`inline-block w-10 lg:w-12 h-0.5 transition-transform duration-200 bg-black ${
+                menuOpen ? "rotate-45 translate-y-1" : ""
               }`}
             ></span>
             <span
-              className={`inline-block w-10 lg:w-12 h-0.5 transition-transform duration-200 ${
-                menuOpen ? "-rotate-45 -translate-y-1 bg-white" : "bg-black"
+              className={`inline-block w-10 lg:w-12 h-0.5 transition-transform duration-200 bg-black ${
+                menuOpen ? "-rotate-45 -translate-y-1" : ""
               }`}
             ></span>
           </div>
@@ -57,7 +57,7 @@ const Navbar = () => {
       {/* full screen menu */}
       <div
         onClick={() => setMenuOpen(false)}
-        className={`fixed z-20 inset-0 bg-black text-white flex flex-col items-center justify-center gap-8 md:gap-12 ${
+        className={`fixed z-20 inset-0 bg-white text-black flex flex-col items-center justify-center gap-8 md:gap-12 ${
           menuOpen ? "translate-y-0" : "-translate-y-full"
         } transition-transform duration-500`}
       >
